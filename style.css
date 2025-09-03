@@ -1,0 +1,150 @@
+/* General Layout */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1c1c1c, #111);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.wrap {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Card Style with Animation */
+.card {
+    background: rgba(30, 30, 30, 0.9);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 242, 96, 0.3);
+    width: 300px;
+    text-align: center;
+    transform: scale(0.95);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1);
+    box-shadow: 0 6px 20px rgba(0, 242, 96, 0.5);
+}
+
+
+.simple-title {
+    font-size: 2rem;
+    color: #00f260;
+    margin-bottom: 10px;
+}
+
+
+.time-big {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #fff;
+}
+
+
+.btn {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: #444;
+}
+
+.btn.primary {
+    background: #00f260;
+    color: black;
+}
+
+.btn.warn {
+    background: #ff4b4b;
+}
+
+.btn.ghost {
+    background: transparent;
+    border: 1px solid #00f260;
+}
+
+
+.laps-section {
+    margin-top: 15px;
+    text-align: left;
+    max-height: 150px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+#lapCountDisplay {
+    color: #00f260;
+    font-weight: bold;
+}
+
+.clock {
+    width: 200px;
+    height: 200px;
+    border: 4px solid #00f260;
+    border-radius: 50%;
+    position: relative;
+    background: #111;
+    margin: 10px auto;
+    box-shadow: inset 0 0 20px rgba(0, 242, 96, 0.3);
+}
+
+
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    transform: rotate(0deg);
+    transition: transform 0.05s linear;
+}
+
+.hand.hour {
+    width: 6px;
+    height: 50px;
+    background: #fff;
+}
+
+.hand.minute {
+    width: 4px;
+    height: 70px;
+    background: #00c9ff;
+}
+
+.hand.second {
+    width: 2px;
+    height: 90px;
+    background: #ff3c3c;
+}
+
+.center-dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footnote {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 10px;
+}
