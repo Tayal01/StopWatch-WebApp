@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="wrap">
+        <main class="card stopwatch-card">
+            <h1 class="simple-title">Stopwatch</h1>
+            <div class="display">
+                <div class="time-big" id="time">00:00:00.00</div>
+
+                <div class="controls">
+                    <button class="btn primary" id="startBtn">Start</button>
+                    <button class="btn" id="pauseBtn" disabled>Pause</button>
+                    <button class="btn ghost" id="lapBtn" disabled>Lap</button>
+                    <button class="btn warn" id="resetBtn">Reset</button>
+                </div>
+
+                <div class="laps-section">
+                    <h3>Laps</h3>
+                    <p id="lapCountDisplay">Total Laps: 0</p>
+                    <div id="laps"></div>
+                </div>
+            </div>
+        </main>
+
+        <aside class="card clock-card">
+            <div class="clock">
+                <div class="hand hour" id="hourHand"></div>
+                <div class="hand minute" id="minHand"></div>
+                <div class="hand second" id="secHand"></div>
+                <div class="center-dot"></div>
+            </div>
+            <div class="footnote">Analog watch animates with the stopwatch.</div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
